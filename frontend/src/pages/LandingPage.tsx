@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -25,7 +25,7 @@ import {
 } from '../components/ui/dialog';
 import toast from 'react-hot-toast';
 import Footer from '@/components/Layout/Footer';
-import { BookOpen, CheckCircle, Sparkles } from 'lucide-react';
+import { BookOpen,Sparkles } from 'lucide-react';
 import FeaturesCarousel from './FeaturesCarousel';
 
 const loginSchema = yup.object().shape({
@@ -124,13 +124,13 @@ const LandingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900">
       {/* Header - Light Mode: White bg, Dark Mode: Slate-900 bg */}
-      <header className="sticky top-0  z-50 bg-white dark:bg-slate-900 border-b border-gray-200  dark:border-slate-700 shadow-sm dark:shadow-slate-800/50 ">
+      <header className="overflow-auto sticky top-0  z-50 bg-white dark:bg-slate-900 border-b border-gray-200  dark:border-slate-700 shadow-sm dark:shadow-slate-800/50 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <BookOpenIcon className="h-8 w-8 text-blue-600 dark:text-cyan-400" />
-              <span className="text-2xl font-bold text-gray-900 dark:text-white">BookReviews</span>
+              <BookOpenIcon className="h-6 w-6 md:h-8 md:w-8 text-blue-600 dark:text-cyan-400" />
+              <span className="text-md md:text-2xl font-bold text-gray-900 dark:text-white">BookReviews</span>
             </div>
 
             {/* Navigation */}
