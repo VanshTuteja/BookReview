@@ -251,7 +251,7 @@ const ProfilePage: React.FC = () => {
 
             {/* Tabs */}
             <div className="mb-8">
-                <nav className="flex space-x-8 border-b border-gray-200 dark:border-gray-700">
+                <nav className="flex space-x-8 border-b border-gray-200 dark:border-gray-700 overflow-auto">
                     {tabs.map((tab) => (
                         <button
                             key={tab.id}
