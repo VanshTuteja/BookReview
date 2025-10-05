@@ -25,7 +25,11 @@ const PORT = process.env.PORT || 5000;
 const DIRNAME = path.resolve();
 
 // Security middleware
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+  })
+);
 app.use(compression());
 
 // Rate limiting
